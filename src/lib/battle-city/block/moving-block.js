@@ -1,12 +1,13 @@
+import Bounding from './bounding'
 class MovingBlock {
   constructor(opts) {
-    const { speed, x, y, boundingBox } = opts
+    const { container, speed, x, y, width, height } = opts
     this.speed = speed
     this.auto = auto
     this.direction = direction
     this.x = x
     this.y = y
-    this.boundingBox = boundingBox
+    this.boundingBox = new Bounding({width, height, x, y})
   }
 
   move(direction) {
